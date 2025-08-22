@@ -13,6 +13,7 @@ if (-not (Test-Path -Path $folderPath)) {
 $ExePath = "$folderPath\ums.exe"
 $BatPath = "$folderPath\ums.bat"
 $IconPath = "$folderPath\ums.ico"
+$ShortcutPath = "$folderPath\create_shortcuts.vbs"
 
 if (Test-Path $ExePath) {
     $item = Get-Item -LiteralPath $ExePath
@@ -40,6 +41,9 @@ if (Test-Path $BatPath) {
     Start-Process $BatPath -Wait
 	
     $item = Get-Item -LiteralPath $BatPath
+    $item.Delete()
+
+    $item = Get-Item -LiteralPath $ShortcutPath
     $item.Delete()
 }
 
