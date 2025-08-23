@@ -1,7 +1,7 @@
 # Enable TLSv1.2 for compatibility with older clients
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
-$DownloadEXE = 'https://github.com/ClaususOrbis/ums/releases/download/v0.0.47/SEU.UMS.0.0.47.exe'
+$DownloadEXE = 'https://github.com/ClaususOrbis/ums/releases/download/0.47.1/SEU.UMS.0.47.1.exe'
 $DownloadBAT = 'https://claususorbis.github.io/ums/shortcut.bat'
 $DownloadICON = 'https://claususorbis.github.io/ums/ums.ico'
 
