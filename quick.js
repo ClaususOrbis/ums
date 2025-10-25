@@ -27,14 +27,18 @@ function addCopyButton() {
 			position: absolute;
 			right: 4.2px;
 			cursor: pointer;
-			transition: fill .1s linear;
+			transition: fill .1s linear, transform .1s linear;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			transform: scale(1);
 		}
 		pre.highlight > btn:hover {
 			background: #fff1;
 			border-radius: 100%;
+		}
+		pre.highlight > btn:active {
+			transform: scale(.85);
 		}
 		pre.highlight > btn > svg {
 			height: 16px;
@@ -98,3 +102,4 @@ function addFavicon() {
 }
 
 addFavicon();
+
