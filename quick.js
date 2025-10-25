@@ -79,3 +79,9 @@ document.addEventListener('click', (e) => {
 		copyStringToClipboard(document.querySelector('code').textContent.replace(/\n/g,''));
 	}
 });
+
+function fixTitle() {
+	document.title = document.title.replace(/\s\|.*/,'');
+}
+
+fixTitle();
