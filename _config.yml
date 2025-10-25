@@ -1,0 +1,5 @@
+# _config.yml
+title: UMS Desktop App for Windows
+description: Simply wraps UMS using Electron.
+markdown: kramdown
+theme: jekyll-theme-minimal
