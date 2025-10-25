@@ -1,3 +1,7 @@
+---
+title: Update UMS Desktop
+---
+
 # Update Available!
 A new update for UMS Desktop App for Windows is available. Please update now for the best experience.
 
