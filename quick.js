@@ -85,3 +85,16 @@ function fixTitle() {
 }
 
 fixTitle();
+
+function addFavicon() {
+	//<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	let fav = document.createElement('link');
+	fav.setAttribute('rel','icon');
+	fav.setAttribute('type','image/x-icon');
+	fav.setAttribute('href',window.location.origin + '/ums/ums.ico');
+
+	document.head.appendChild(fav);
+}
+
+addFavicon();
