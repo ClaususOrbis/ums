@@ -10,8 +10,8 @@ if (-not (Test-Path -Path $folderPath)) {
     New-Item -Path $folderPath -ItemType Directory
 }
 
-Stop-Process -Name "ums" -Force
-Stop-Process -Name "SEU UMS" -Force
+Stop-Process -Name "ums" -Force -ErrorAction SilentlyContinue
+Stop-Process -Name "SEU UMS" -Force -ErrorAction SilentlyContinue
 
 $ExePath = "$folderPath\ums.exe"
 $BatPath = "$folderPath\ums.bat"
