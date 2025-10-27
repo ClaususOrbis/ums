@@ -34,6 +34,7 @@ function addCopyButton() {
 			justify-content: center;
 			transform: scale(1);
 			border-radius: 100%;
+			-webkit-tap-highlight-color: transparent;
 		}
 		div.highlight > btn:hover {
 			background: rgba(255,255,255,.1);
@@ -103,5 +104,6 @@ function addFavicon() {
 }
 
 addFavicon();
+
 
 
