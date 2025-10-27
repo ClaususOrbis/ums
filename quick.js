@@ -2,7 +2,7 @@
 
 function addCopyButton() {
     let cb = document.querySelector('code'),
-		hmain = cb.parentNode,
+		hmain = cb.parentNode.parentNode,
 		newbtn = document.createElement('btn'),
 		styles = document.createElement('style');
 		
@@ -10,45 +10,46 @@ function addCopyButton() {
     newbtn.classList.add('copy-button');
 	
 	styles.textContent = `
-		pre.highlight:has(code) {
+		div.highlight:has(code) {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			position: relative;
-			padding: 14.4px;
+			background: rgba(0,0,0,0.9);
+			border: 1px solid rgba(255,255,255,0.15);
+			margin: 14.4px 0;
 		}
-		pre.highlight > code {
-			flex: 1 0 auto;
-			margin-right: 36px;
+		pre.highlight {
+			width: calc(100% - 44.8px);
+			background: unset;
+			border: unset;
+			margin: 0;
 		}
-		pre.highlight > btn {
+		div.highlight > btn {
 			line-height: 0;
 			fill: white;
-			position: absolute;
-			right: 4.2px;
 			cursor: pointer;
-			transition: fill .1s linear, transform .1s linear;
+			transition: fill .1s linear, transform .1s linear, background .05s linear;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			transform: scale(1);
-		}
-		pre.highlight > btn:hover {
-			background: #fff1;
 			border-radius: 100%;
 		}
-		pre.highlight > btn:active {
+		div.highlight > btn:hover {
+			background: rgba(255,255,255,.1);
+		}
+		div.highlight > btn:active {
 			transform: scale(.85);
 		}
-		pre.highlight > btn > svg {
+		div.highlight > btn > svg {
 			height: 16px;
 			width: 16px;
 			padding: 14.4px;
 		}
-		pre.highlight > btn[class*="green"] {
+		div.highlight > btn[class*="green"] {
 			fill: #22c55e;
 		}
-		pre.highlight > btn[class*="red"] {
+		div.highlight > btn[class*="red"] {
 			fill: #f50a0a;
 		}
 	`;
@@ -102,4 +103,5 @@ function addFavicon() {
 }
 
 addFavicon();
+
 
